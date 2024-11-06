@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego sobre Cortazar</title>
+    <link rel="cortazar.html">
+    <link rel="stylesheet" href="cortazar.css">
+    <link rel="icon" href="https://i.pinimg.com/564x/54/68/a3/5468a33bc43e258995f15ad01e5ad7cc.jpg" type="image/x-icon">
+    <style>
+        p{
+            font-size: 25px;
+        }
+        h3{
+            font-family: cursive;
+            font-size: 30px;
+        }
+        ol {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            list-style-position: inside;
+        }
+
+        li {
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            background: #f9f9f9;
+            transition: background 0.3s;
+        }
+
+        li:hover {
+            background: #e9ecef;
+        }
+
+        strong {
+            color: #007bff;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+h2{
+    text-align: center;
+    color: #333;
+}
+
+#questions-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.question p {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.feedback {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.feedback.correct {
+    color: green;
+}
+
+.feedback.incorrect {
+    color: red;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    
+    background-color: #0056b3;
+}
+button {
+    display: block;
+    width: auto; /* Cambiado de 100% a auto */
+    padding: 5px 10px; /* Ajustado el padding */
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 14px; /* Tamaño de fuente reducido */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+    <h1>¡¡¡Bienvenido al juego sobre Cortazar!!!</h1>
+    <nav>
+        <a href="#intro" class="tag">intro/</a>
+        <a href="#reglas"  class="tag">Reglas/</a>
+        <a href="cortazar.html"class="tag">Pagina sobre Cortazar/</a>
+    </header>
+    <section class="excerpt" id="intro">
+    <h3>Intro y idea:</h3>
+    <p>La idea de elaborar un juego sobre el Escritor Cortazar es bastante limitada para desarrollar o inventar algun juego,pero se nos ocurrio que con los conocimientos de javascript un juego de preguntas sobre Cortazar y agregar comentario en verde si la respuesta es correcta y en rojo si es incorrecta..., donde los jugadores tendran un total de tres errores para todo el cuestionario y superarlo, en el caso de que no lo supere y tenga mas de tres errores, tendra que volver a intentarlo en otro momento o un lapso breve de tiempo.</p>
+</section>
+<section class="excerpt" id="reglas">
+<details>
+    <summary>Reglas a Seguir:</summary>
+<ol>
+    <li><strong>Participantes:</strong>
+        <ul>
+            <li>El juego puede ser jugado por un número ilimitado de participantes, en equipos o de manera individual.</li>
+        </ul>
+    </li>
+    <li><strong>Turnos:</strong>
+        <ul>
+            <li>Los jugadores o equipos tomarán turnos para responder preguntas. El orden de turno puede ser determinado al azar al inicio del juego.</li>
+        </ul>
+    </li>
+    <li><strong>Tipos de Preguntas:</strong>
+        <ul>
+            <li>Las preguntas pueden clasificarse en diferentes categorías de la vida de Cortazar.</li>
+            <li>Se pueden establecer niveles de dificultad (fácil, medio, difícil) que otorgan diferentes puntos.</li>
+        </ul>
+    </li>
+    <li><strong>Tiempo Límite:</strong>
+        <ul>
+            <li>Cada participante o equipo tendrá un tiempo limitado para responder cada pregunta (por ejemplo, 2 minutos ). Si no responden en ese tiempo, pierden la oportunidad de contestar.</li>
+        </ul>
+    </li>
+    <li><strong>Sistema de Puntos:</strong>
+        <ul>
+            <li>Se asignan puntos por respuestas correctas:</li>
+            <ul>
+                <li>Pregunta fácil: 1 punto</li>
+                <li>Pregunta media: 2 puntos</li>
+                <li>Pregunta difícil: 3 puntos</li>
+            </ul>
+            <li>Las respuestas incorrectas pueden restar puntos (opcional).</li>
+        </ul>
+    </li>
+    <li><strong>Respuestas:</strong>
+        <ul>
+            <li>Las respuestas deben ser claras y directas.</li>
+            <li>Se debe definir si se aceptan respuestas parciales o sinónimos.</li>
+        </ul>
+    </li>
+    <li><strong>Desempates:</strong>
+        <ul>
+            <li>En caso de empate al final del juego, se puede realizar una ronda adicional de preguntas para determinar al ganador.</li>
+        </ul>
+    </li>
+    <li><strong>Conducta:</strong>
+        <ul>
+            <li>Se espera que todos los participantes mantengan un comportamiento respetuoso y no hagan trampas. Cualquier conducta inapropiada puede resultar en la descalificación.</li>
+            <li>Texto para responder las preguntas:Julio Cortázar: Un Maestro de la Literatura
+
+                Julio Cortázar nació el 26 de agosto de 1914 en Bruselas, Bélgica, aunque su vida y obra están profundamente ligadas a Argentina, país donde pasó gran parte de su infancia y juventud. Cortázar es uno de los escritores más influyentes del siglo XX, conocido por su estilo innovador y su capacidad para desafiar las convenciones narrativas.
+                
+                Una de sus obras más emblemáticas es una novela que permite al lector explorar distintas narrativas: se puede leer de diversas formas y, a menudo, sorprende por su estructura. Este título se ha convertido en un clásico de la literatura contemporánea.
+                
+                En su trayectoria, Cortázar también destacó en el género del cuento, creando relatos memorables que se recopilan en varias colecciones. Entre sus historias más conocidas se encuentran "Casa tomada" y "La noche boca arriba", que forman parte de una de sus compilaciones más reconocidas.
+                
+                Cortázar era un amante del jazz, y su pasión por la música se refleja en su obra "El perseguidor", donde aborda la vida de un saxofonista y su obsesión por el jazz. En esta narrativa, el autor explora las conexiones entre la música, la creatividad y la búsqueda de la identidad.
+                
+                Además, su escritura a menudo incorpora el realismo mágico, un recurso literario que mezcla lo cotidiano con lo fantástico, creando una atmósfera única en sus relatos. Esta técnica permite que lo extraordinario se presente como parte de la vida diaria.
+                
+                Julio Cortázar tenía una visión particular sobre la literatura, describiéndola en una de sus citas más célebres como un espacio de libertad y experimentación. Su amor por el deporte, especialmente el rugby, también es una faceta interesante de su vida, que complementa su profunda admiración por la cultura y el arte.</li>
+        </ul>
+    </li>
+    <li><strong>Final del Juego:</strong>
+        <ul>
+            <li>El juego termina cuando se han agotado las preguntas o se alcanza un límite de tiempo establecido al inicio.</li>
+            <li>El participante o equipo con más puntos al final del juego será declarado ganador.</li>
+        </ul>
+    </li>
+</ol>
+</details>
+</section>
+<section>
+<h3>Una vez aprendidas las reglas pasemos a jugar...</h3>
+</section>
+<section>
+    <center>
+    <h2>¡Pon a prueba tus conocimientos sobre Julio Cortázar!</h2>
+
+    <div id="questions-container"></div>
+    
+    <button onclick="submitAnswers()">Enviar Respuestas</button>
+    
+    <script>
+   const questions = [
+                { question: "¿En qué año nació Julio Cortázar?", answer: "1914", difficulty: "Fácil", points: 1 },
+                { question: "¿Dónde nació Cortázar?", answer: "Bruselas", difficulty: "Fácil", points: 1 },
+                { question: "¿Cuál es el título de su novela más famosa que se puede leer de varias maneras?", answer: "Rayuela", difficulty: "Medio", points: 2 },
+                { question: "¿Qué colección de cuentos incluye 'Casa tomada' y 'La noche boca arriba'?", answer: "Bestiario", difficulty: "Medio", points: 2 },
+                { question: "¿Qué obra trata sobre un músico y su obsesión por el jazz?", answer: "El perseguidor", difficulty: "Medio", points: 2 },
+                { question: "¿Qué recurso literario utiliza Cortázar para mezclar lo real y lo fantástico?", answer: "realismo mágico", difficulty: "Difícil", points: 3 },
+                { question: "¿Cómo describe Cortázar a la literatura en una de sus citas más conocidas?", answer: "una forma de vivir", difficulty: "Difícil", points: 3 },
+                { question: "¿Qué deporte le apasionaba a Cortázar?", answer: "boxeo", difficulty: "Fácil", points: 1 }
+            ];
+
+            function displayQuestions() {
+                const container = document.getElementById('questions-container');
+                questions.forEach((q, index) => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.classList.add('question');
+                    questionDiv.innerHTML = `
+                        <p>${index + 1}. ${q.question} <strong>(Dificultad: ${q.difficulty}, Puntos: ${q.points})</strong></p>
+                        <input type="text" id="answer-${index}" placeholder="Tu respuesta">
+                        <span id="feedback-${index}" class="feedback"></span>
+                    `;
+                    container.appendChild(questionDiv);
+                });
+            }
+
+            function submitAnswers() {
+                let totalPoints = 0;
+                questions.forEach((q, index) => {
+                    const userAnswer = document.getElementById(`answer-${index}`).value.trim().toLowerCase();
+                    const correctAnswer = q.answer.toLowerCase();
+                    const feedback = document.getElementById(`feedback-${index}`);
+
+                    if (userAnswer === correctAnswer) {
+                        feedback.textContent = "CORRECTO";
+                        feedback.className = "feedback correct";
+                        totalPoints += q.points; // Sumar puntos si la respuesta es correcta
+                    } else {
+                        feedback.textContent = "INCORRECTO";
+                        feedback.className = "feedback incorrect";
+                    }
+                });
+                alert(`Puntos totales: ${totalPoints}`);
+            }
+
+            displayQuestions();
+    </script>
+</section>
+</center>
+</body>
+</html>
